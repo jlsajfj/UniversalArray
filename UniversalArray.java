@@ -34,7 +34,7 @@ public class UniversalArray
         loc="";
         elements=0;
     }
-    
+
     /**
      * Add an element to the Array<br />
      * Generics was used so that instead of added a new overloaded function when a new class is to be added,<br />
@@ -61,14 +61,14 @@ public class UniversalArray
         }
         elements++;
     }
-    
+
     /**
      * Just a testing class that outputs the current regex string.
      */
     public void test(){
         System.out.println(loc);
     }
-    
+
     /**
      * Getter method to get the element at index i regardless of class
      * @param i index of element to be retrieved
@@ -87,7 +87,7 @@ public class UniversalArray
             //System.out.println(strings.get(Integer.parseInt(loc.substring(found.start()+1,found.end()-1))));
             switch(loc.charAt(match.end()-1)){
                 case 'i':
-                return (E) ints.get(Integer.parseInt(loc.substring(found.start()+1,found.end()-1)));
+                return (E)ints.get(Integer.parseInt(loc.substring(found.start()+1,found.end()-1)));
                 case 's':
                 return (E) strings.get(Integer.parseInt(loc.substring(found.start()+1,found.end()-1)));
                 case 'd':
@@ -97,5 +97,20 @@ public class UniversalArray
             }
         }
         return (E) "Failed";
+    }
+    
+    /**
+     * A generic type caster from stack overflow
+     * http://stackoverflow.com/questions/14524751/cast-object-to-generic-type-for-returning
+     * @param o object to be cast
+     * @param clazz the class to be casted to
+     * @return T the casted object
+     */
+    public static <T> T convertInstanceOfObject(Object o, Class<T> clazz) {
+        try {
+            return clazz.cast(o);
+        } catch(ClassCastException e) {
+            return null;
+        }
     }
 }
