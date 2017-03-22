@@ -52,6 +52,7 @@ public class UniversalArray
         System.out.println(loc);
     }
     
+    @SuppressWarnings("unchecked")
     public <E> E get(int i){
         Pattern pattern = Pattern.compile("#"+i+"[^0-9]");
         Matcher match = pattern.matcher(loc);
@@ -74,6 +75,6 @@ public class UniversalArray
                 return (E) bools.get(Integer.parseInt(loc.substring(found.start()+1,found.end()-1)));
             }
         }
-        return null;
+        return (E) "Failed";
     }
 }
