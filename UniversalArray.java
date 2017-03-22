@@ -58,13 +58,13 @@ public class UniversalArray
         Matcher match = pattern.matcher(loc);
         if(match.find()){
             System.out.println(match.end());
-            System.out.println(loc.charAt(match.end()+1));
+            System.out.println(loc.charAt(match.end()-1));
             Pattern nxt = Pattern.compile("@[0-9]+#");
             Matcher found = nxt.matcher(loc);
             found.find(match.end());
             System.out.println(loc.substring(found.start()+1,found.end()-1));
             System.out.println(strings.get(Integer.parseInt(loc.substring(found.start()+1,found.end()-1))));
-            switch(loc.charAt(match.end())){
+            switch(loc.charAt(match.end()-1)){
                 case 'i':
                 return (E) ints.get(Integer.parseInt(loc.substring(found.start()+1,found.end()-1)));
                 case 's':
