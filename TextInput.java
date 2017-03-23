@@ -2,10 +2,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.awt.Color;
 import java.util.*;
 /**
- * Text input in Greenfoot! 
- *
- * @author JoeyMa
- * @version March 2017
+ * A Generic Button to display text that is clickable. 
+ * 
+ * This should be added to, and controlled by, a world.
+ * 
+ * @author Jordan Cohen
+ * @version v0.1.5
  */
 public class TextInput extends Actor
 {
@@ -38,7 +40,6 @@ public class TextInput extends Actor
             active=!active;
             if(active){
                 buttonText="";
-                updateMe(buttonText);
             }
         }
         if(active){
@@ -51,7 +52,8 @@ public class TextInput extends Actor
                     buttonText+=" ";
                 }
                 else if(temp.equals("backspace")){
-                    buttonText=buttonText.substring(0,buttonText.length()-1);
+                    if(buttonText.length()!=0)
+                        buttonText=buttonText.substring(0,buttonText.length()-1);
                 }
                 updateMe(buttonText);
             }
