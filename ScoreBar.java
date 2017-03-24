@@ -47,6 +47,10 @@ public class ScoreBar extends Actor
         this(width);
         textFormat=format;
     }
+    
+    public ScoreBar(String format){
+        this(0,format);
+    }
 
     public ScoreBar(int width, String format, WeirdArray arr){
         this(width,format);
@@ -166,16 +170,16 @@ public class ScoreBar extends Actor
         String temp = Double.toString(val);
         Matcher mat = Pattern.compile("\\.").matcher(temp);
         mat.find();
-        System.out.println(temp);
-        System.out.println(temp.length()-mat.end());
+        //System.out.println(temp);
+        //System.out.println(temp.length()-mat.end());
         while(temp.length()-mat.end()<dec)
             temp+="0";
-        System.out.println(temp);
+        //System.out.println(temp);
         while(temp.length()<=leng){
             temp="0"+temp;
         }
         temp=temp.substring(0,leng+1);
-        System.out.println(temp);
+        //System.out.println(temp);
         return temp;
     }
 
