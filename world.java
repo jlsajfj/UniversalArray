@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class world here.
+ * Testing world for everything with a custom click class at the bottom.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Joey Ma
+ * @version March 2017
  */
 public class world extends World
 {
