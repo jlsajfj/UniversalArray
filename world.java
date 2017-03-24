@@ -9,10 +9,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class world extends World
 {
     ScoreBar score;
-    /**
-     * Constructor for objects of class world.
-     * 
-     */
     public world()
     {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -102,7 +98,6 @@ public class world extends World
         int x=info.getX(),y=info.getY();
         x-=xA;y-=yA;
         if(x<0||x>=wA||y<0||y>=hA) return false;
-        System.out.println(iA.getColorAt(x,y));
         return iA.getColorAt(x,y).getAlpha()>0;
     }
 }
