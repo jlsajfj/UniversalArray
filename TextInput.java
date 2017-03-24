@@ -2,12 +2,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.awt.Color;
 import java.util.*;
 /**
- * A Generic Button to display text that is clickable. 
+ * Generic text input to greenfoot based off my "toggle button" code (based off Jordan Cohen's standard button code).
  * 
- * This should be added to, and controlled by, a world.
- * 
- * @author Jordan Cohen
- * @version v0.1.5
+ * @author Joey Ma
+ * @version March 2017
  */
 public class TextInput extends Actor
 {
