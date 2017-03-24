@@ -17,7 +17,7 @@ public class world extends World
     {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1200, 400, 1);
-        score = new ScoreBar(0,"TEST: %i:4% AND %s% PLUS %d:5.2% WITH %i:2% INT %b:Hi,BYE%");
+        score = new ScoreBar("TEST: %i:4% AND %s% PLUS %d:5.2% WITH %i:2% INT %b:ALIVE,DEAD%");
         addObject(score,getWidth()/2,15);
         score.update(1,"HI");
         score.update(0,5);
@@ -33,6 +33,7 @@ public class world extends World
     }
     button b0,b1,b2,b3,b4,b5;
     ToggleButton tb;
+    TextInput textinput;
     /**
      * Prepare the world for the start of the program. That is: create the initial
      * objects and add them to the world.
@@ -55,8 +56,8 @@ public class world extends World
         b5 = new button("FIRST DOUBLE");
         addObject(b5, 480, 73);
         score.updateText();
-        TextInput textinput = new TextInput("");
-        addObject(textinput,694,216);
+        textinput = new TextInput();
+        addObject(textinput,64,216);
     }
     int f;
     double d;
@@ -80,8 +81,37 @@ public class world extends World
             d=Math.max(0,d);
             score.update(2,d);
         }
+        if((Greenfoot.isKeyDown("enter")||clicked(textinput))&&textinput.active){
+            score.update(1,textinput.getText());
+        }
         active=tb.active;
         score.update(4,active);
         score.updateText();
+    }
+    
+    public static boolean clicked(Actor a){
+        if(a==null) return false;
+        MouseInfo info = Greenfoot.getMouseInfo();
+        if(info==null) return false;
+        if(!Greenfoot.mouseClicked(a)) return false;
+        GreenfootImage iA=a.getImage();
+        iA.rotate(a.getRotation());
+        int wA=iA.getWidth(),hA=iA.getHeight(),xA=a.getX(),yA=a.getY();
+        xA-=wA/2;
+        yA-=hA/2;
+        int x=info.getX(),y=info.getY();
+        System.out.println("Start");
+        System.out.println(x);
+        System.out.println(y);
+        System.out.println(xA);
+        System.out.println(yA);
+        System.out.println(x);
+        System.out.println(y);
+        System.out.println(wA);
+        System.out.println(hA);
+        x-=xA;y-=yA;
+        if(x<0||x>=wA||y<0||y>=hA) return false;
+        System.out.println(iA.getColorAt(x,y));
+        return iA.getColorAt(x,y).getAlpha()>0;
     }
 }
