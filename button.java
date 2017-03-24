@@ -2,10 +2,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.awt.*;
 
 /**
- * Write a description of class button here.
+ * Literally just a text display box
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Joey Ma
+ * @version March 2017
  */
 public class button extends Actor
 {
