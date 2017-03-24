@@ -4,7 +4,7 @@ import java.awt.Color;
  * A button that can toggle true and false, based off of the standard button by Jordan Cohen
  * 
  * @author Joey Ma
- * @version v0.1.5
+ * @version March 2017
  */
 public class ToggleButton extends Actor
 {
