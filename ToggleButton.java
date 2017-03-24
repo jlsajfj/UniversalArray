@@ -1,11 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.awt.Color;
 /**
- * A Generic Button to display text that is clickable. 
+ * A button that can toggle true and false, based off of the standard button by Jordan Cohen
  * 
- * This should be added to, and controlled by, a world.
- * 
- * @author Jordan Cohen
+ * @author Joey Ma
  * @version v0.1.5
  */
 public class ToggleButton extends Actor
