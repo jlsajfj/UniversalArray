@@ -5,10 +5,10 @@ import java.util.regex.Pattern;
 import java.util.*;
 
 /**
- * Scorebar with code pawned from mr cohen
+ * A completely customizable score bar with the color and text format losely based off the code by Jordan Cohen.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Joey Ma
+ * @version March 2017
  */
 public class ScoreBar extends Actor
 {
