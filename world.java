@@ -100,15 +100,6 @@ public class world extends World
         xA-=wA/2;
         yA-=hA/2;
         int x=info.getX(),y=info.getY();
-        System.out.println("Start");
-        System.out.println(x);
-        System.out.println(y);
-        System.out.println(xA);
-        System.out.println(yA);
-        System.out.println(x);
-        System.out.println(y);
-        System.out.println(wA);
-        System.out.println(hA);
         x-=xA;y-=yA;
         if(x<0||x>=wA||y<0||y>=hA) return false;
         System.out.println(iA.getColorAt(x,y));
