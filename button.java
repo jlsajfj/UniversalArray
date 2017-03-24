@@ -30,12 +30,4 @@ public class button extends Actor
         scoreBoard.drawString(a, centeredY, 15);
         /**CODE PAWNED END*/
     }
-
-    /**
-     * Act - do whatever the button wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
-    }    
 }
