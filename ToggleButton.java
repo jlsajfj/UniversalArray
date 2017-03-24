@@ -80,7 +80,4 @@ public class ToggleButton extends Actor
         myAltImage.setColor (Color.BLACK);
         myAltImage.drawRect (0,0,tempTextImage.getWidth() + 7, tempTextImage.getHeight() + 7);
     }
-    
-    
-    
 }
